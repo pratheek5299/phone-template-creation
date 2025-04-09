@@ -260,13 +260,13 @@ export default function CanvasEditor() {
 					style={styles.button}
 					onClick={() => addShape("circle")}
 				>
-					 Add Circle
+					Add Circle
 				</button>
 				<button
 					style={styles.button}
 					onClick={() => addShape("rectangle")}
 				>
-					 Add Rectangle
+					Add Rectangle
 				</button>
 				<button style={styles.exportButton} onClick={exportImage}>
 					📥 Export Design
@@ -355,65 +355,71 @@ export default function CanvasEditor() {
 										/>
 									</>
 								) : (
-									<>
-										<label>Width:</label>
-										<input
-											type="number"
-											value={shape.width || 0}
-											style={{
-												border: "1px solid gray",
-												borderRadius: "5px",
-												padding: "5px",
-											}}
-											onChange={(e) =>
-												updateShape(
-													shape.id,
-													"width",
-													e.target.value
-												)
-											}
-										/>
-										<label>Height:</label>
-										<input
-											type="number"
-											value={shape.height || 0}
-											style={{
-												border: "1px solid gray",
-												borderRadius: "5px",
-												padding: "5px",
-											}}
-											onChange={(e) =>
-												updateShape(
-													shape.id,
-													"height",
-													e.target.value
-												)
-											}
-										/>
-										<label>Corner Radius:</label>
-										<input
-											type="number"
-											value={shape.cornerRadius || 0}
-											style={{
-												border: "1px solid gray",
-												borderRadius: "5px",
-												padding: "5px",
-											}}
-											onChange={(e) =>
-												updateShape(
-													shape.id,
-													"cornerRadius",
-													e.target.value
-												)
-											}
-										/>
-									</>
+									<div className="grid grid-cols-2 gap-4">
+										<div className="">
+											<label>Width:</label>
+											<input
+												type="number"
+												value={shape.width || 0}
+												style={{
+													border: "1px solid gray",
+													borderRadius: "5px",
+													padding: "5px",
+												}}
+												onChange={(e) =>
+													updateShape(
+														shape.id,
+														"width",
+														e.target.value
+													)
+												}
+											/>
+										</div>
+										<div className="">
+											<label>Height:</label>
+											<input
+												type="number"
+												value={shape.height || 0}
+												style={{
+													border: "1px solid gray",
+													borderRadius: "5px",
+													padding: "5px",
+												}}
+												onChange={(e) =>
+													updateShape(
+														shape.id,
+														"height",
+														e.target.value
+													)
+												}
+											/>
+										</div>
+										<div className="">
+											<label>Corner Radius:</label>
+											<input
+												type="number"
+												value={shape.cornerRadius || 0}
+												style={{
+													border: "1px solid gray",
+													borderRadius: "5px",
+													padding: "5px",
+												}}
+												onChange={(e) =>
+													updateShape(
+														shape.id,
+														"cornerRadius",
+														e.target.value
+													)
+												}
+											/>
+										</div>
+									</div>
 								)}
 								<button
 									style={styles.deleteButton}
 									onClick={() => deleteShape(shape.id)}
 								>
-									 Delete
+									Delete
 								</button>
 							</div>
 						</div>
