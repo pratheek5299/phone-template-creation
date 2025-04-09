@@ -355,7 +355,7 @@ export default function CanvasEditor() {
 										/>
 									</>
 								) : (
-									<div className="grid grid-cols-2 gap-4">
+									<>
 										<div className="">
 											<label>Width:</label>
 											<input
@@ -413,7 +413,7 @@ export default function CanvasEditor() {
 												}
 											/>
 										</div>
-									</div>
+									</>
 								)}
 								<button
 									style={styles.deleteButton}
